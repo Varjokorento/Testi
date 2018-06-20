@@ -35,6 +35,11 @@ app.post('/handleform', parser, function(req, res) {
 	respdata += "</body></html>"
 	res.end(respdata);
 	}
+	if(operaatio === "teetuhoa") {
+	var respdata = (parseInt(req.body.firstnumber)*parseInt(req.body.secondnumber));
+	respdata += "</body></html>"
+	res.end(respdata);
+	}
 })
 
 var server = app.listen(3000, function() {
